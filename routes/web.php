@@ -10,7 +10,6 @@ Route::get('/', function () {
     ]);
 })->name('home');
 
-Auth::routes(['verify' => true]);
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
