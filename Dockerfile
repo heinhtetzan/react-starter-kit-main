@@ -51,11 +51,11 @@ WORKDIR /app
 # Copy application
 COPY . .
 
-# Frontend build
-RUN npm install && npm run build
-
 # Backend dependencies
 RUN composer install --no-interaction --prefer-dist
+
+# Frontend build
+RUN npm install && npm run build
 
 # SQLite database
 RUN mkdir -p database \
