@@ -61,11 +61,6 @@ RUN npm install && npm run build
 RUN mkdir -p database \
     && touch database/database.sqlite
 
-# Laravel setup
-RUN php artisan key:generate \
-    && php artisan migrate --force \
-    && php artisan storage:link
-
 # Permissions
 RUN chmod -R 777 storage bootstrap/cache database
 
