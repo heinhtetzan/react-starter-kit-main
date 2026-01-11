@@ -9,6 +9,7 @@ ENV APP_ENV=production
 RUN apt update && apt install -y \
     ca-certificates \
     curl \
+    wget \
     git \
     unzip \
     sqlite3 \
